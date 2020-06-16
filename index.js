@@ -23,7 +23,8 @@ cron.schedule(" 5 * * * *", function() {
 
 //// Express & Routing
 const app = express();
-app.listen(3000, () => console.log('Am running on port 3000 🙃'))
+const port = process.env.PORT || 3000; 
+app.listen(port , () => console.log(`Am running on port ${port}`))
 app.use(express.static('public'))
 app.use(express.json({limit : '10mb'}))
 
