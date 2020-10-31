@@ -3,6 +3,7 @@ const express = require('express');
 const Datastore = require('nedb');
 const cron = require('node-cron');
 const fs = require('fs');
+const {readFileSync, readFile} = require('fs');
 require('dotenv').config;
 
   ////// Server health  a cron job 
@@ -20,14 +21,6 @@ cron.schedule(" 5 * * * *", function() {
         console.log("Status Logged!"); 
     }); 
 }); 
-
-//// Express & Routing
-const app = express();
-const port = process.env.PORT || 3000; 
-app.listen(port , () => console.log(`Am running on port ${port}`))
-app.use(express.static('public'))
-app.use(express.json({limit : '10mb'}))
-
 /////Nedb
 const database = new Datastore('email.db');
 const errorr = new Datastore('Errors.db');
@@ -35,6 +28,14 @@ const complains = new Datastore('complains.db');
 complains.loadDatabase();
 database.loadDatabase();
 errorr.loadDatabase();
+
+//// Express & Routing
+const app = express();
+const port = process.env.PORT || 80; 
+app.listen(port , () => console.log(`Am running on port ${port}`))
+app.use(express.static('public'));  
+app.use(express.json({limit : '10mb'}));
+
 
 ////// Nodemailer Transporter 
 var transporter = nodemailer.createTransport({
@@ -98,7 +99,39 @@ app.get('/api', (request,response) =>{
         response.json(data)
     });
 });
-
+////////Routing
+app.get('/about', (request, response) => {
+    readFile('./public/about.html', 'utf8', (err, html) =>{
+        if(err){
+            response.status(500).send('Out of Service')
+        }
+        response.send(html)
+    })
+});
+app.get('/user', (request, response) => {
+    readFile('./public/read.html', 'utf8', (err, html) =>{
+        if(err){
+            response.status(500).send('Out of Service')
+        }
+        response.send(html)
+    })
+});
+app.get('/tb', (request, response) => {
+    readFile('./public/tb.html', 'utf8', (err, html) =>{
+        if(err){
+            response.status(500).send('Out of Service')
+        }
+        response.send(html)
+    })
+});
+app.get('/terms', (request, response) => {
+    readFile('./public/terms.html', 'utf8', (err, html) =>{
+        if(err){
+            response.status(500).send('Out of Service')
+        }
+        response.send(html)
+    })
+});
 //// PUBLIC API TO HANDLE GET FROM DATABASE IN JSON FORMATE (Send)
 app.get('/error', (request,response) =>{
     errorr.find({}, (err, data) =>{
