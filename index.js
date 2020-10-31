@@ -99,6 +99,19 @@ app.get('/api', (request,response) =>{
         response.json(data)
     });
 });
+// Unsubscribe from mail list --- Can be deployed via mail too 
+app.get('/del/:id', (request,response) =>{
+    var user = request.params.id
+    database.findOne({_id : user }, (err, data) =>{
+        if(err){
+            response.end();
+            return ;
+        }
+        database.remove({ _id : user }, {}, function (err, data) {
+            res.redirect('/')
+            });
+    });
+});
 ////////Routing
 app.get('/about', (request, response) => {
     readFile('./public/about.html', 'utf8', (err, html) =>{
