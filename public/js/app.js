@@ -19,7 +19,7 @@ async function storeData(){
     if(moro.status === 'Success'){
         alert('Welcome To the Club ')
     }else{
-        alert('Try Again, your network is kinda bad ', moro.name, ' or check the user form for you name ')
+        alert('Try Again, your network is kinda bad ', moro.name, '\n before Making A New Request \n or check the user List for you name ')
     }
 
 };
