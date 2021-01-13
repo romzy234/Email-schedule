@@ -30,8 +30,7 @@
 {"errno":"ETIMEDOUT","code":"ESOCKET","syscall":"connect","address":"192.3.183.226","port":465,"command":"CONN","type":"Error From Welcome mail","who":{"name":"Ogoh Cyril","email":"mariaogoh68@gmail.com"},"timestamp":1592264908617,"_id":"b9KKXkIc1EYgZlX8"}
 {"errno":"EREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN","type":"Error From Welcome mail","who":{"name":"romzy_234","email":"cyrilogoh@gmail.com"},"timestamp":1592602670734,"_id":"d3E9WkEjU1a7oVn9"}
 {"errno":"EREFUSED","code":"EDNS","syscall":"queryA","hostname":"mail.gildfashion.com","command":"CONN","type":"Error From Complain mail","timestamp":1592242877923,"_id":"dK00T8mx2wqtc9RJ"}
-{"errno":"ENETUNREACH","code":"ESOCKET","syscall":"connect","address":"2a00:1450:4013:c05::6c","port":465,"command":"CONN","type":"Error From Welcome mail","who":{"name":"solomon","email":"ochoyoocoechi@gmail.com"},"timestamp":1592312223716,"_id":"f75GAvskiEdqHVWd"}
-{"errno":"EREFUSED","code":"EDNS","syscall":"queryA","hostname":"mail.gildfashion.com","command":"CONN","type":"Error From Complain mail","timestamp":1592243210115,"_id":"fFcv1bvdFMvwD5G4"}
+{"errno":"ENETUNREACH","cod"command":"CONN","type":"Error From Complain mail","timestamp":1592243210115,"_id":"fFcv1bvdFMvwD5G4"}
 {"errno":"ECONNRESET","code":"ESOCKET","syscall":"read","command":"CONN","type":"Error From Complain mail","timestamp":1592268175365,"_id":"jigw1Eedv0k7As0D"}
 {"errno":"ETIMEOUT","code":"EDNS","syscall":"queryA","hostname":"mail.gildfashion.com","command":"CONN","type":"Error From Welcome mail","who":{"name":"Ogoh Cyril","email":""},"timestamp":1592265288894,"_id":"jrUyGE2QUx2Ys6y3"}
 {"errno":"ENOTFOUND","code":"EDNS","syscall":"getaddrinfo","hostname":"smtp.gmail.com","command":"CONN","type":"Error From Welcome mail","who":{"name":"Ogoh Cyril","email":"cyrilogoh@gmail.com"},"timestamp":1595016730554,"_id":"kdt0lUUeefKuH6ZQ"}
