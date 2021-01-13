@@ -1,7 +1,6 @@
 Thu, 11 Jun 2020 23:05:00 GMT  
                 : Server is working
-Fri, 12 Jun 2020 00:05:00 GMT  
-                : Server is working
+
 Fri, 12 Jun 2020 01:05:00 GMT  
                 : Server is working
 Fri, 12 Jun 2020 14:05:00 GMT  
